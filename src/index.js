@@ -17,12 +17,12 @@ let options = {
 
 form.addEventListener('submit', onFormSubmit);
 let lightbox = new SimpleLightbox('.gallery a');
+
 function onFormSubmit(evt) {
   evt.preventDefault();
   gallery.innerHTML = '';
 
   const { searchQuery } = evt.currentTarget.elements;
-  // let lightbox = new SimpleLightbox('.gallery a');
 
   let observer = new IntersectionObserver(onLoad, options);
   function onLoad(entries, observer) {
@@ -53,7 +53,7 @@ function onFormSubmit(evt) {
       }
       gallery.insertAdjacentHTML('beforeend', createMarkup(data));
       observer.observe(target);
-      let lightbox = new SimpleLightbox('.gallery a');
+      lightbox.refresh();
     })
     .catch(err => console.log(err));
 }

@@ -76,7 +76,7 @@ function onFormSubmit(evt) {
   //   }
   //   return resp.json();
   // });
-}
+// }
 
 function createMarkup(obj) {
   return obj.hits

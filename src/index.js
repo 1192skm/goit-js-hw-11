@@ -1,13 +1,13 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { fetchGallery } from './fetchGallery';
+import { fetchGallery, perPage } from './fetchGallery';
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const target = document.querySelector('.js-guard');
 
-const perPage = 40;
+
 let currentPage = 1;
 let options = {
   root: null,

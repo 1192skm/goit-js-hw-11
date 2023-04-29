@@ -18,3 +18,5 @@ export async function fetchGallery(search, page = 1) {
   //   return resp.json();
   // });
 }
+
+export const perPage = 40;

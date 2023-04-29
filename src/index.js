@@ -118,7 +118,7 @@ function createMarkup(obj) {
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------
-// ASYNC/AWAIT
+
 
 
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -193,15 +193,6 @@ function createMarkup(obj) {
 
 //   return await resp.data;
 
-//   // return fetch(
-//   //   `${BASE_URL}?key=${KEY_API}&q=${search}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`
-//   // ).then(resp => {
-//   //   if (!resp.ok) {
-//   //     throw new Error(resp.statusText);
-//   //   }
-//   //   return resp.json();
-//   // });
-// }
 
 // function createMarkup(obj) {
 //   return obj.hits

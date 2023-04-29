@@ -1,7 +1,7 @@
 import axios from 'axios';
 export const perPage = 40;
 export async function fetchGallery(search, page = 1) {
-  const BASE_URL = 'https://pixabay.com/api';
+  const BASE_URL = 'https://pixabay.com/api/';
   const KEY_API = '35783392-ced7b2b0963a7e7ac45fdf9cc';
 
   const resp = await axios.get(

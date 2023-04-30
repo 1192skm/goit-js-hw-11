@@ -32,7 +32,11 @@ function onFormSubmit(evt) {
           .then(data => {
             gallery.insertAdjacentHTML('beforeend', createMarkup(data));
             lightbox.refresh();
-            if (currentPage === Math.round(data.totalHits / perPage)) {
+            if (
+              data.totalHits < perPage ||
+              currentPage === Math.round(data.totalHits / perPage)
+            ) {
+              currentPage = 1;
               observer.unobserve(target);
             }
           })
@@ -53,7 +57,7 @@ function onFormSubmit(evt) {
       gallery.insertAdjacentHTML('beforeend', createMarkup(data));
       if (data.totalHits > perPage) {
         observer.observe(target);
-      }
+      };
       lightbox.refresh();
     })
     .catch(err => console.log(err));

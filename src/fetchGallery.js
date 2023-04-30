@@ -20,3 +20,50 @@ export async function fetchGallery(search, page = 1) {
 }
 
 
+
+
+
+
+
+
+// Ви можете до ф-ції onFormSubmit прописати
+// перед тим як викликаєте fetchGallery
+// if (data.totalHits > perPage) {
+//   let observer = new IntersectionObserver(onLoad, options);
+//   observer.observe(target);
+// } else {
+//   fetchGallery(searchQuery.value)
+//     .then(data => {
+//       if (data.hits.length) {
+//         Notify.info(`Hooray! We found ${data.totalHits} images.`);
+//       } else {
+//         Notify.failure(
+//           'Sorry, there are no images matching your search query. Please try again.'
+//         );
+//       }
+//       gallery.insertAdjacentHTML('beforeend', createMarkup(data));
+//       lightbox.refresh();
+//     })
+//     .catch(err => console.log(err));
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,6 @@ const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const target = document.querySelector('.js-guard');
 
-
 let currentPage = 1;
 let options = {
   root: null,
@@ -52,12 +51,13 @@ function onFormSubmit(evt) {
         );
       }
       gallery.insertAdjacentHTML('beforeend', createMarkup(data));
-      observer.observe(target);
+      if (data.hits.length > perPage) {
+        observer.observe(target);
+      }
       lightbox.refresh();
     })
     .catch(err => console.log(err));
 }
-
 
 // async function fetchGallery(search, page = 1) {
 //   const BASE_URL = 'https://pixabay.com/api/';
@@ -104,13 +104,7 @@ function createMarkup(obj) {
     .join('');
 }
 
-
-
-
-
 // ------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import SimpleLightbox from 'simplelightbox';
@@ -183,7 +177,6 @@ function createMarkup(obj) {
 //   );
 
 //   return await resp.data;
-
 
 // function createMarkup(obj) {
 //   return obj.hits

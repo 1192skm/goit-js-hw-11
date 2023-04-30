@@ -51,7 +51,7 @@ function onFormSubmit(evt) {
         );
       }
       gallery.insertAdjacentHTML('beforeend', createMarkup(data));
-      if (data.hits.length > perPage) {
+      if (data.totalHits > perPage) {
         observer.observe(target);
       }
       lightbox.refresh();
